@@ -35,8 +35,35 @@ let playerSelection = getPlayerChoice();
 // plays a single round
 
 function singleRound (playerSelection, computerSelection) {
+    if (computerSelection == playerSelection) {
+        alert("It's a tie!")
+        return;
+    }
+    else if (computerSelection == 'ROCK' && playerSelection == 'PAPER') {
+        alert("You win! The Rock can't resist them paper$!");
+        return;
+    }
+    else if (computerSelection == 'ROCK' && playerSelection == 'SCISSORS') {
+        alert("Looooser! The Rock don't scissor no one!")
+        return;
+    }
+    else if (computerSelection == 'PAPER' && playerSelection == 'SCISSORS') {
+        alert("You win! The best scissoring in life can't be bought with papers!")
+        return;
+    }
+    else if (computerSelection == 'PAPER' && playerSelection == 'ROCK') {
+        alert("Looooser! The Rock will always fall victim to the papers' bidding!")
+        return;
+    }
+    else if (computerSelection == 'SCISSORS' && playerSelection == 'ROCK') {
+        alert("You win mate! The Rock don't use no scissors!");
+        return;
+    }
+    else if (computerSelection == 'SCISSORS' && playerSelection == 'PAPER') {
+        alert('Looooser! Them papers don\'t mean nothing if you know how to sccissor!')
+        return;
+    }
 
 }
-
 // record the result and start another round
 // if the player or the computer reaches 3 - they win
